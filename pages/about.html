@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>dumbDOM</title>
+    <link rel="stylesheet" href="../assets/css/styles.css">
+</head>
+<body>
+    <div id="header-container"></div>
+    <script>
+        fetch("../header.html")
+            .then(response => response.text())
+            .then(data => document.getElementById("header-container").innerHTML = data)
+            .catch(error => console.error("Error loading header:", error));
+    </script>
+
+    <h1>About this site</h1>
+    <p><a href="nunja.html">Nunya</a></p>
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="icon" type="image/png" href="/assets/icons/favicon.ico">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>dumbDOM</title>
+    <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+    <div id="header-container"></div>
+    <script>
+        fetch("header.html")
+            .then(response => response.text())
+            .then(data => document.getElementById("header-container").innerHTML = data)
+            .catch(error => console.error("Error loading header:", error));
+    </script>
+    <h1>Welcome to dumbDOM!</h1>
+    <p>This is just a simple text-based website... for now </p>
+    <br>
+    <h2>Things to do here</h2>
+    <ul>
+        <li>Check out our <a href="/pages/laboratory.html">Laboratory</a> for things we are working on</li>
+        <li>Find out all <a href="/pages/about.html">about us</a></li>
+        <li><a href="/pages/contact.html">Contact</a> us</li>
+    </ul>
+</body>
+</html>

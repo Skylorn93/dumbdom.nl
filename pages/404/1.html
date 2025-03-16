@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>dumbDOM</title>
+    <link rel="stylesheet" href="/assets/css/styles.css">
+</head>
+<body>
+    <body class="error-page">
+    <div id="header-container"></div>
+    <script>
+        fetch("/header.html")
+            .then(response => response.text())
+            .then(data => document.getElementById("header-container").innerHTML = data)
+            .catch(error => console.error("Error loading header:", error));
+    </script>
+ <img src="/assets/images/404-goblin-1.png" alt="404 Goblin" style="max-width: 100%; height: auto; display: block; margin: 0 auto;">
+
+<h2>Oh No! You've Angered the Goblin!</h2>
+<p>You decided to push past the goblin, ignoring his warning. Brave... or foolish?</p>
+<p>Now you've ended up in his lair—filled with dusty scrolls, rusty swords, and far too many unsorted socks. He's very displeased!</p>
+<p><strong>You have two choices:</strong></p>
+<ul>
+  <li><a href="/">Apologise and swiftly retreat to safety</a></li>
+  <li><a href="/treasure">Risk it and search the lair for hidden treasure</a></li>
+</ul>
+<p><em>"What exactly are you poking around for? Lost treasure? Forbidden magic? My legendary sock collection? Whatever it is, get your grubby paws out of my lair—or you'll become the newest exhibit!"</em></p>
+</body>
+</html>

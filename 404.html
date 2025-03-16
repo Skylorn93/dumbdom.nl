@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>dumbDOM</title>
+    <link rel="stylesheet" href="/assets/css/styles.css">
+</head>
+    <body class="error-page">
+
+    <div id="header-container"></div>
+    <script>
+        fetch("/header.html")
+            .then(response => response.text())
+            .then(data => document.getElementById("header-container").innerHTML = data)
+            .catch(error => console.error("Error loading header:", error));
+    </script>
+        <img src="/assets/images/404-goblin.png" alt="404 Goblin" style="max-width: 100%; height: auto; display: block; margin: 0 auto;">
+    <h1>#404 - You've awoken the goblin!</h1>
+    <p>Oh dear, you've ventured too far into the darkness and stumbled upon this cranky little goblin.</p>
+    <p><i>"Lost, are we?"</i> the goblin sneers. <i>"Looking for pages that don't exist, hmm? Perhaps they've been gobbled up."</i></p>
+    <br>
+    <h2>Quick, before he gets grumpier:</h2>
+
+<a href="/index.html">Return to the Home Page</a>
+<div style="height: 100vh;"></div>
+<p><a href="/pages/404/1.html">Push past the goblin!</a></p>
+
+</body>
+</html>

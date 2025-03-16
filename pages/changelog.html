@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>dumbDOM</title>
+    <link rel="stylesheet" href="../assets/css/styles.css">
+</head>
+    <div id="header-container"></div>
+    <script>
+        fetch("../header.html")
+            .then(response => response.text())
+            .then(data => document.getElementById("header-container").innerHTML = data)
+            .catch(error => console.error("Error loading header:", error));
+    </script>
+    <h1>Changelog!</h1>
+    <p>The changelog serves as a record of all updates, improvements, and changes made to dumbDOM. Whether it’s a small tweak, a major overhaul, or a simple experiment, every modification is logged here as a way to track progress and evolution over time.</p>
+    <p>Think of this page as a digital journal documenting the site's journey - from initial ideas to new features and everything in between.</p>
+    <br>
+    <h2>15 March 2025</h2>
+    <ul>
+        <li>Created the 404 page</li>
+        <li>Hired Gob the goblin to protect the treasure behind the 404 page</li>
+        <li>Started organising pages and content into a proper stucture (assets, pages, etc.)</li>
+        <li>Learnt a very painful and time-consuming lesson about relative page links after organising content into a proper structure</li>
+        <li>Learnt about classes and how to apply them to specific objects to override the global stylesheet</li>
+    </ul>
+    <br>
+    <h2>14 March 2025</h2>
+    <ul>
+        <li>Site launched!</li>
+        <ul>
+            <li>Registered dumbdom.nl domain with GoDaddy</li>
+            <li>Configured AWS S3 bucket for webhosting</li>
+            <li>Configured AWS Route 53 for nameserver and alias records</li>
+            <li>Configured GoDaddy domain settings to route to AWS nameserver records</li>
+            <li>Configured AWS Cloudfront</li>
+            <li>Requested and installed SSL certificate through AWS Certificate Manager</li>
+        </ul>
+        <li>Added the Home, About, Contact pages</li>
+        <li>Created styles.css</li>
+        <li>Created header.html containing the navigation menu</li>
+        <li>Created website favicon</li>
+        <li>Spent 3 hours trying to figure out why dumbdom.nl wasn't opening (ended up being AWS Cloudfront caching)</li>
+    </ul>
+</body>
+</html>

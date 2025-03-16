@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>dumbDOM</title>
+    <link rel="stylesheet" href="/assets/css/styles.css">
+</head>
+<body>
+    <div id="header-container"></div>
+    <script>
+        fetch("/header.html")
+            .then(response => response.text())
+            .then(data => document.getElementById("header-container").innerHTML = data)
+            .catch(error => console.error("Error loading header:", error));
+    </script>
+    <h1>Contact us!</h1>
+    <p>All queries should be routed through Gob the goblin.</p>
+    <br>
+    <h2>Contacting Gob</h2>
+
+<p>The Gob's communication methods include:</p>
+
+<ul>
+  <li>Smoke signals (highly ineffective, he's afraid of fire)</li>
+  <li>Carrier pigeon (often mistaken for lunch)</li>
+  <li>Telepathy (but only if you believe hard enough)</li>
+</ul>
+
+<p>If none of these work, just yell really loudly. He probably won't answer, but you'll feel better.</p>
+
+<p><strong>Good luck!</strong></p>
+    </body>
+</html>
