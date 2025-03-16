@@ -48,7 +48,7 @@ nav {
 /* Center remaining nav items */
 .nav-items {
     display: flex;
-    justify-content: center;
+    justify-content: left;
     flex-grow: 1; 
     list-style: none;
     margin: 0;
