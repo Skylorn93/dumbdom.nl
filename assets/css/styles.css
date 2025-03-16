@@ -2,8 +2,8 @@ body {
     font-family: Arial, sans-serif;
     display: block;
     padding-top: 50px;
-    padding-left: 20px; /* Global left padding */
-    padding-right: 20px; /* Keep spacing uniform */
+    padding-left: 20px; 
+    padding-right: 20px; 
     background-color: var(--bg-color);
     color: var(--text-color);
     text-align: left;
@@ -34,24 +34,23 @@ nav {
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-/* Ensure navbar-home is on the far left */
+/* This is the dumbDOM text */
 .navbar-home {
-    font-size: 1.5rem; /* Larger than other nav items */
+    font-size: 1.5rem; 
     font-weight: bold;
     color: var(--nav-text);
     text-decoration: none;
     display: flex;
     align-items: center;
-    margin-right: auto; /* Pushes other items to the right */
+    margin-right: auto; 
 }
 
 /* Center remaining nav items */
 .nav-items {
     display: flex;
     justify-content: center;
-    flex-grow: 1; /* Ensures nav items take up remaining space */
+    flex-grow: 1; 
     list-style: none;
-    padding-right: 25%;
     margin: 0;
 }
 
